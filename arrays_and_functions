@@ -1,0 +1,53 @@
+#include <iostream>
+using namespace std;
+
+void shownumberofcharsinarray(const int nElements, char text[]){
+
+    int letters = nElements-1;
+    cout << text << endl;
+    cout << "Number of letters are: " << letters << endl;
+
+}
+
+void shownumberofcharsinarraywithpointers (const int nElements, char *pText){
+
+    int letters = nElements-1;
+    cout << pText << endl;
+
+    cout << "Number of letters are: " << letters << endl;
+
+}
+
+void shownumberofcharsinarraywithreferencevar(char (&text)[9]){
+
+    cout << "Number of letters are: " << sizeof(text)/ sizeof(char)-1 << endl;
+
+    for(int i=0; i<sizeof(text)/ sizeof(char)-1; i++){
+
+        cout << text[i] << flush;
+    }
+}
+
+
+int main() {
+
+    char text[]="longword";
+
+    const int nElements = sizeof(text)/ sizeof(char);
+
+    cout << "With Passing Array to Function... " << endl;
+
+    shownumberofcharsinarray(nElements, text);
+
+    cout << "With Pointers... " << endl;
+
+    shownumberofcharsinarraywithpointers(nElements, text);
+
+    cout << "With Reference variable... " << endl;
+
+    shownumberofcharsinarraywithreferencevar(text);
+
+
+
+
+    return 0;
