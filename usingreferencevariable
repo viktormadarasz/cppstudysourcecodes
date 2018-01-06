@@ -1,0 +1,31 @@
+#include <iostream>
+using namespace std;
+
+void manipulate (double &dValueinmanipulate) {
+  
+    dValueinmanipulate = 222.4;
+
+    cout << "dValueinmanipulate reference variable= " << dValueinmanipulate << endl;
+
+}
+
+int main() {
+
+    double dValue = 123.4;
+
+    cout << "dValue original = " << dValue << endl;
+
+    manipulate(dValue);
+
+    cout << "dValue after manipulate function with reference variable = " << dValue << endl;
+
+
+
+    return 0;
+}
+
+
+
+
+
+
