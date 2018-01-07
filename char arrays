@@ -1,0 +1,33 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+
+
+    char text[] = "viktor";
+
+    int k=0;
+
+    while(true) {
+
+        if(text[k] == 0){
+            break;
+        }
+
+        cout << text[k] << flush;
+        k++;
+    }
+
+    int nElements = sizeof(text)-1;
+
+    cout << endl;
+
+    cout << "Size of text: " << sizeof(text) << endl;
+
+    cout << "Number of characters are: " << nElements << endl;
+
+    cout << "the last character in the string which terminates: " << text[sizeof(text)] << endl;
+
+
+    return 0;
+}
